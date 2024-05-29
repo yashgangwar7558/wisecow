@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wisecow-deployment
+  labels:
+    app: wisecow
+spec:
+  replicas: 3  
+  selector:
+    matchLabels:
+      app: wisecow
+  template:
+    metadata:
+      labels:
+        app: wisecow
+    spec:
+      containers:
+      - name: wisecow
+        image: yashgangwar123/wisecow:latest 
+        ports:
+        - containerPort: 4499
+        env:
+        - name: SRVPORT
+          valueFrom:
+            configMapKeyRef:
+              name: wisecow-config
+              key: SRVPORT  

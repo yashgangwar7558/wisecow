@@ -4,6 +4,8 @@
 
 1. Containerized Wisecow application and pushed to dockerhub.
 
+   ![image](https://github.com/yashgangwar7558/wisecow/blob/master/screenshots/docker_ps.png)
+
 2. Run the Wisecow application as Kubernetes Deployment. 
 
 3. Setup CI/CD to build and push the image to Dockerhub and Kube deployments.

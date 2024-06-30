@@ -20,7 +20,7 @@ spec:
         app.kubernetes.io/name: app-wisecow
     spec:
       containers:
-      - image: public.ecr.aws/l6m2t8p7/docker-2048:latest
+      - image: yashgangwar123/wisecow:latest
         imagePullPolicy: Always
         name: wisecow
         ports:
